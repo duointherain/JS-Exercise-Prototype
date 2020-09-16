@@ -91,9 +91,51 @@ function Person(name, age){
         + The `drive` method should return a string "I ran out of fuel at x miles!" x being `odometer`.
 */
 console.log('***Task 2***');
-// function Car() {
 
-// }
+function Car(model, mpg){
+    this.name = model;
+    this.mpg = mpg;
+    this.tank = 0;
+    this.odometer = 0
+  } 
+  Car.prototype.fill = function(gallons){
+      this.tank = 10;
+    }
+  
+  Car.prototype.drive = function(){
+    this.tank = 0;
+  }
+
+
+  Car.prototype.toString = function(){
+    return `${this.name}, ${this.mpg}`;
+  }
+  
+  const carOne = new Car('Mustang', 25);
+  const carTwo = new Car('Charger', 17);
+  const carThree = new Car('Shelby', 12);
+  
+  console.log(carOne.toString());
+  console.log(carTwo.toString());
+  console.log(carThree.toString());
+  
+  carTwo.fill();
+ 
+  
+  console.log(carTwo.tank);
+  
+ 
+
+  //console.log(carTwo.tank);
+  console.log(carTwo.fill);
+  //carTwo.drive();
+
+
+
+
+
+
+
 
 // /*
 //   TASK 3
@@ -103,11 +145,50 @@ console.log('***Task 2***');
 //         + Should return a string "Playing with x", x being the favorite toy.
 // */
 console.log('***Task 3***');
-// function Baby() {
 
-// }
+function Baby(name, age, favoriteToy){
+    this.name = name;
+    this.age = age;
+    this.favoriteToy = favoriteToy;
+    
+  } 
+  Baby.prototype.play = function(){
+      this.favoriteToy = 10;
+      
+    }
+  
+//   Baby.prototype.drive = function(){
+//     this.tank = 0;
+//   }
 
-// /* 
+
+  Baby.prototype.toString = function(){
+    return `${this.name}, ${this.age}`;
+  }
+  
+  const BabyOne = new Baby('Heero', 1);
+  const BabyTwo = new Baby('Duo', 1);
+  const BabyThree = new Baby('Wufei', 1);
+  
+  console.log(BabyOne.toString());
+  console.log(BabyTwo.toString());
+  console.log(BabyThree.toString());
+  
+  //BabyTwo.fill();
+ 
+  
+  //console.log(BabyTwo.tank);
+  
+ 
+
+  //console.log(carTwo.tank);
+  //console.log(BabyTwo.fill);
+
+
+
+
+
+
 //   TASK 4
 console.log('***Task 4***');
 //   In your own words explain the four principles for the "this" keyword below:
