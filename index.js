@@ -90,7 +90,7 @@ function Person(name, age){
     - STRETCH: A car which runs out of `fuel` while driving can't drive any more distance:
         + The `drive` method should return a string "I ran out of fuel at x miles!" x being `odometer`.
 */
-console.log('***Task ***');
+console.log('***Task 2***');
 // function Car() {
 
 // }
@@ -102,19 +102,21 @@ console.log('***Task ***');
 //     - Besides the methods on Person.prototype, babies have the ability to `.play()`:
 //         + Should return a string "Playing with x", x being the favorite toy.
 // */
+console.log('***Task 3***');
 // function Baby() {
 
 // }
 
 // /* 
 //   TASK 4
-
+console.log('***Task 4***');
 //   In your own words explain the four principles for the "this" keyword below:
-//   1. 
-//   2. 
-//   3. 
-//   4. 
+//   1. This is global if strict mode isn't set and undefied if it is, on the window scope
+//   2. This is about what's to the left of the dot in the funtion it's called in
+//   3. This can be explicitly defined in javascript using call, apply, or bind
+//   4. The new keyword makes an object and this will apply to it if used in that. 
 // */
+
 
 
 // ///////// END OF CHALLENGE /////////
