@@ -7,17 +7,17 @@
         + If a plane lands, its `isFlying` property is set to false.
 */
 
-// EXAMPLE SOLUTION CODE:
-function Airplane(name) {
-  this.name = name;
-  this.isFlying = false;
-}
-Airplane.prototype.takeOff = function () {
-  this.isFlying = true;
-};
-Airplane.prototype.land = function () {
-  this.isFlying = false;
-};
+// // EXAMPLE SOLUTION CODE:
+// function Airplane(name) {
+//   this.name = name;
+//   this.isFlying = false;
+// }
+// Airplane.prototype.takeOff = function () {
+//   this.isFlying = true;
+// };
+// Airplane.prototype.land = function () {
+//   this.isFlying = false;
+// };
 
 
 /*
@@ -38,10 +38,44 @@ Airplane.prototype.land = function () {
     - Give instances of Person a method `.toString()`:
         + It should return a string with `name` and `age`. Example: "Mary, 50"
 */
+console.log('***Task 1***');
 
-function Person() {
+function Person(name, age){
+    this.name = name;
+    this.age = age;
+    this.stomach = [];
+  } 
+  Person.prototype.eat = function(edible){
+    if(this.stomach.length < 10){
+      this.stomach.push(edible);
+    }
+  }
+  Person.prototype.poop = function(){
+    this.stomach = [];
+  }
 
-}
+
+  Person.prototype.toString = function(){
+    return `${this.name}, ${this.age}`;
+  }
+  
+  const personOne = new Person('William', 21);
+  const personTwo = new Person('Grady', 33);
+  const personThree = new Person('Cheree', 41);
+  
+  console.log(personOne.toString());
+  console.log(personTwo.toString());
+  console.log(personThree.toString());
+  
+  personTwo.eat('🍍');
+  personTwo.eat('🐌');
+  personTwo.eat('🥪');
+  
+  console.log(personTwo.stomach);
+  
+  personTwo.poop();
+  
+  console.log(personTwo.stomach);
 
 /*
   TASK 2
@@ -56,40 +90,40 @@ function Person() {
     - STRETCH: A car which runs out of `fuel` while driving can't drive any more distance:
         + The `drive` method should return a string "I ran out of fuel at x miles!" x being `odometer`.
 */
+console.log('***Task ***');
+// function Car() {
 
-function Car() {
+// }
 
-}
+// /*
+//   TASK 3
+//     - Write a Baby constructor subclassing Person.
+//     - Besides `name` and `age`, Baby takes a third argument to initialize `favoriteToy`.
+//     - Besides the methods on Person.prototype, babies have the ability to `.play()`:
+//         + Should return a string "Playing with x", x being the favorite toy.
+// */
+// function Baby() {
 
-/*
-  TASK 3
-    - Write a Baby constructor subclassing Person.
-    - Besides `name` and `age`, Baby takes a third argument to initialize `favoriteToy`.
-    - Besides the methods on Person.prototype, babies have the ability to `.play()`:
-        + Should return a string "Playing with x", x being the favorite toy.
-*/
-function Baby() {
+// }
 
-}
+// /* 
+//   TASK 4
 
-/* 
-  TASK 4
-
-  In your own words explain the four principles for the "this" keyword below:
-  1. 
-  2. 
-  3. 
-  4. 
-*/
+//   In your own words explain the four principles for the "this" keyword below:
+//   1. 
+//   2. 
+//   3. 
+//   4. 
+// */
 
 
-///////// END OF CHALLENGE /////////
-///////// END OF CHALLENGE /////////
-///////// END OF CHALLENGE /////////
-if (typeof exports !== 'undefined') {
-  module.exports = module.exports || {}
-  if (Airplane) { module.exports.Airplane = Airplane }
-  if (Person) { module.exports.Person = Person }
-  if (Car) { module.exports.Car = Car }
-  if (Baby) { module.exports.Baby = Baby }
-}
+// ///////// END OF CHALLENGE /////////
+// ///////// END OF CHALLENGE /////////
+// ///////// END OF CHALLENGE /////////
+// if (typeof exports !== 'undefined') {
+//   module.exports = module.exports || {}
+//   if (Airplane) { module.exports.Airplane = Airplane }
+//   if (Person) { module.exports.Person = Person }
+//   if (Car) { module.exports.Car = Car }
+//   if (Baby) { module.exports.Baby = Baby }
+// }
